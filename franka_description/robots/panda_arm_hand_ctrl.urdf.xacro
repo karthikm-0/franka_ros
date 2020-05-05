@@ -31,8 +31,7 @@
   </xacro:if>
   <xacro:unless value="$(arg use_ros_control)">
         <xacro:include filename="$(find jaco_gazebo)/urdf/gzplugin_joint_control.urdf.xacro"/>
-        <xacro:gzplugin_joint_control robot_components_namespace="$(arg robot_components_namespace)"
-                                  trajectory_param_namespace="$(arg trajectory_param_namespace)"/>
+        <xacro:gzplugin_joint_control robot_components_namespace="$(arg robot_components_namespace)" trajectory_param_namespace="$(arg trajectory_param_namespace)"/>
   </xacro:unless>
 
   <xacro:if value="$(arg load_grasp_fix)">
